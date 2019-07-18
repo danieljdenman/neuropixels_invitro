@@ -1,6 +1,65 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from braintv_ephys_dev.workstation.danield.generalephys import color50
+
+option234_xpositions = np.zeros((192,2))
+option234_ypositions = np.zeros((192,2))
+option234_positions = np.zeros((384,2))
+option234_positions[:,0][::4] = 21
+option234_positions[:,0][1::4] = 53
+option234_positions[:,0][2::4] = 5
+option234_positions[:,0][3::4] = 37
+option234_positions[:,1] = np.floor(np.linspace(383,0,384)/2) * 20
+
+color50 = ["#67572e",
+"#272d38",
+"#e47689",
+"#7499db",
+"#64e251",
+"#4553a8",
+"#e55728",
+"#325338",
+"#da94d7",
+"#591d42",
+"#d3e571",
+"#c7af44",
+"#5e3ecc",
+"#7f75df",
+"#9d5258",
+"#a3e841",
+"#cb48b4",
+"#4a6890",
+"#c3e19a",
+"#77606d",
+"#50a874",
+"#e1e53b",
+"#68e0ca",
+"#ac2b51",
+"#cf9894",
+"#829b44",
+"#e54150",
+"#da4687",
+"#382f1c",
+"#927933",
+"#73c5dc",
+"#dc865f",
+"#925991",
+"#e8b12e",
+"#b22d25",
+"#518c8e",
+"#3d6e2a",
+"#572282",
+"#55ad3d",
+"#cf832e",
+"#8a9675",
+"#dabd88",
+"#62221e",
+"#6fe594",
+"#9ab92f",
+"#312557",
+"#b74cdf",
+"#994923",
+"#c1b4d1",
+"#c5dac7"]
 
 #compute and optionally plot a peri-stimulus time histogram
 #plot is a line plot, with options for error display [bars or shaded]
